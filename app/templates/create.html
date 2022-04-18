@@ -1,0 +1,36 @@
+ {% extends 'base.html' %}
+
+ {% block title %}
+ Создать карточку
+ {% endblock %}
+
+ {% block body %}
+
+<h1>  </h1>
+ <div class="container">
+  <div class="mb-3">
+   <label for="exampleFormControlTextarea1" class="form-label">Название карточки (тема или вопрос)</label>
+   <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+ </div>
+ <div class="mb-3">
+   <label for="exampleFormControlTextarea1" class="form-label">Тэги, от которых зависит карточка</label>
+   <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+  <div class="mb-3">
+   <label for="exampleFormControlTextarea1" class="form-label">Тэги, которые зависят</label>
+   <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+ </div>
+   <div class="mb-3">
+   <label for="exampleFormControlTextarea1" class="form-label">Тело карточки</label>
+   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+ </div>
+  <div class="mb-3">
+   <label for="formFile" class="form-label">Загрузить изображение</label>
+   <input class="form-control" type="file" id="formFile">
+ </div>
+    <div class="mb-3">
+   <label for="exampleFormControlTextarea1" class="form-label">Список источников</label>
+   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+ </div>
+</div>
+
+ {% endblock %}
