@@ -1,7 +1,9 @@
 import os
 
-from flask import Flask, render_template
-from app.models import db
+from flask import Flask
+
+from .models import db
+from .routes import main
 
 
 def create_app(test_config=None):
@@ -11,29 +13,18 @@ def create_app(test_config=None):
         ("SECRET_KEY")
     )
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///base.db'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    app.register_blueprint(main)
 
-    #db.init_app(app)
+    db.init_app(app)
+
+    with app.app_context():
+        db.create_all()
 
     if test_config is None:
         app.config.from_pyfile('config.py', silent=True)
 
     else:
         app.config.from_mapping(test_config)
-
-    @app.route('/')
-    def hello():
-        return render_template("index.html")
-
-    @app.route('/card')
-    def card():
-        return render_template("card.html")
-
-    @app.route('/create')
-    def create_card():
-        return render_template("create.html")
-
-    @app.route('/change')
-    def change_card():
-        return render_template("change.html")
 
     return app

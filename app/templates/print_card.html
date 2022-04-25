@@ -1,0 +1,22 @@
+ {% extends 'base.html' %}
+
+ {% block title %}
+ {{ card.title }}
+ {% endblock %}
+
+ {% block body %}
+
+<h1>  </h1>
+ <div class="container">
+    <h1>{{ card.title }}</h1>
+
+     <div class="alert-info">
+         <h2>{{ card.title }}</h2>
+         <p>{{ card.text }}</p>
+         <p>{{ card.references }}</p>
+         <br>
+     </div>
+
+</div>
+
+ {% endblock %}

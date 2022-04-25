@@ -1,0 +1,24 @@
+ {% extends 'base.html' %}
+
+ {% block title %}
+ Создать карточку
+ {% endblock %}
+
+ {% block body %}
+
+<h1>  </h1>
+ <div class="container">
+    <h1>Все карточки</h1>
+
+    {% for el in cards %}
+     <div class="alert-info">
+         <h2>{{ el.title }}</h2>
+         <p>{{ el.references }}</p>
+         <a href="/print/{{ el.id }}" class="btn btn-warning">Детальнее</a>
+         <br>
+     </div>
+    {% endfor %}
+
+</div>
+
+ {% endblock %}

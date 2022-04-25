@@ -8,29 +8,21 @@
 
 <h1>  </h1>
  <div class="container">
-  <div class="mb-3">
-   <label for="exampleFormControlTextarea1" class="form-label">Название карточки (тема или вопрос)</label>
-   <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
- </div>
- <div class="mb-3">
-   <label for="exampleFormControlTextarea1" class="form-label">Тэги, от которых зависит карточка</label>
-   <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
-  <div class="mb-3">
-   <label for="exampleFormControlTextarea1" class="form-label">Тэги, которые зависят</label>
-   <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
- </div>
-   <div class="mb-3">
-   <label for="exampleFormControlTextarea1" class="form-label">Тело карточки</label>
-   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
- </div>
-  <div class="mb-3">
-   <label for="formFile" class="form-label">Загрузить изображение</label>
-   <input class="form-control" type="file" id="formFile">
- </div>
-    <div class="mb-3">
-   <label for="exampleFormControlTextarea1" class="form-label">Список источников</label>
-   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
- </div>
+     <form method="post">
+          <div class="mb-3">
+           <label for="title" class="form-label">Название карточки (тема или вопрос)</label>
+           <textarea class="form-control" name="title" id="title" rows="1"></textarea>
+         </div>
+           <div class="mb-3">
+           <label for="text" class="form-label">Тело карточки</label>
+           <textarea class="form-control" name="text" id="text" rows="3"></textarea>
+         </div>
+            <div class="mb-3">
+           <label for="references" class="form-label">Список источников</label>
+           <textarea class="form-control" name="references" id="references" rows="3"></textarea>
+         </div>
+         <input type="submit" class="btn btn-success" value="Сохранить">
+     </form>
 </div>
 
  {% endblock %}
